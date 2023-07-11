@@ -4,4 +4,4 @@ nome = "Gregory"
 sobrenome = "Augusto"
 idade = 17
 
-puts "Meu nome é #{nome} #{sobrenome} e tenho #{idade} anos!"
+puts "Meu nome é #{nome} #{sobrenome} e tenho #{idade} anos"
