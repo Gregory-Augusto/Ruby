@@ -15,7 +15,6 @@ produto = gets.chomp
 
 print "Insira o valor do produto: "
 valor = gets.chomp.to_f
-valor_formatado = sprintf("%.2f", valor.round(2))
 
 print "Insira o método de pagamento: "
 pagamento = gets.chomp.upcase
@@ -24,17 +23,17 @@ print "Será dinheiro, cartão ou crédito? "
 dinheiro_ou_cartao_ou_credito = gets.chomp.upcase
 
 if pagamento == "À VISTA" && dinheiro_ou_cartao_ou_credito == "DINHEIRO"|| pagamento == "À VISTA" && dinheiro_ou_cartao_ou_credito == "CARTÃO"
-    puts "O valor final do produto #{produto} cairá de #{valor} para #{valor_formatado - (valor_formatado * 0.1)}"
+    puts "O valor final do produto #{produto} cairá de #{valor.round(2)} para #{(valor_formatado - (valor_formatado * 0.1)).round(2)}"
 elsif pagamento == "À VISTA" && dinheiro_ou_cartao_ou_credito == "CRÉDITO"
-    puts "O valor final do produto #{produto} cairá de #{valor} para #{valor_formatado - (valor_formatado * 0.15)}"
+    puts "O valor final do produto #{produto} cairá de #{valor.round(2)} para #{(valor - (valor * 0.15)).round(2)}"
 elsif pagamento == "PARCELADO"
     print "Em quantas vezes será feito o parcelamento? "
     parcelas = gets.chomp.to_i
     if parcelas >= 4
-        puts "O valor final do produto #{produto} sofrerá um acréscimo de 10%.\nO valor será #{valor_formatado + (valor * 0.1)}, 
-            Será parcelado em #{parcelas} vezes de R$#{(valor_formatado + (valor_formatado * 0.1)) / parcelas}"
+        puts "O valor final do produto #{produto} sofrerá um acréscimo de 10%.\nO valor será #{(valor + (valor * 0.1)).round(2)}, 
+            Será parcelado em #{parcelas} vezes de R$#{((valor + (valor * 0.1)) / parcelas).round(2)}"
     else
-        puts "O valor final do produto #{produto} será o #{valor_formatado}, e será parcelado em #{parcelas} vezes"
+        puts "O valor final do produto #{produto} será o #{valor.round(2)}, e será parcelado em #{parcelas} vezes"
     end
 else
     puts "A venda foi invalidada, tente novamente"
