@@ -12,41 +12,18 @@ print "Insira sua idade: "
 idade = gets.chomp.to_i
 
 
-if idade.is_a?(Integer) 
-    if idade < 18 
+if idade.is_a?(Integer)
+    if idade > 0 && idade <= 10
         puts "Bem-vindo, #{nome}, você é uma criança"
-    elsif idade >=18 && idade < 65
-        puts "Bem-vindo, #{nome}, você é um adulto"
-    else
+    elsif idade >=10 && idade < 19
+        puts "Bem-vindo, #{nome}, você é um adolescente"
+    elsif idade > 19 && idade < 60 
+      puts "Bem-vindo, #{nome}, você é um adulto"
+    elsif idade >= 60 && idade <= 100
         puts "Bem-vindo, #{nome}, você é um idoso" 
+    else
+        puts "Idade inválida"
     end
-#else
-#   puts "Programa encerrado"
 end
-
-
-#Feito pelo Chat GPT
-=begin
-print "Insira seu nome: "
-nome = gets.chomp
-
-print "Insira sua idade: "
-idade = gets.chomp
-
-if idade =~ /\A\d+\z/
-  idade = idade.to_i
-  
-  if idade < 18
-    puts "Bem-vindo, #{nome}, você é uma criança"
-  elsif idade >= 18 && idade < 65
-    puts "Bem-vindo, #{nome}, você é um adulto"
-  else
-    puts "Bem-vindo, #{nome}, você é um idoso"
-  end
-else
-  puts "Programa encerrado"
-end
-=end
-
     
 
