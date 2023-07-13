@@ -9,4 +9,4 @@ caixa_alta = palavras.map do |palavras|
     palavras.upcase
 end
 
-puts caixa_alta
+puts caixa_alta.inspect

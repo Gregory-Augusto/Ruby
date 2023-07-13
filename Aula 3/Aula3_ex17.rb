@@ -6,8 +6,9 @@ por 4, utilize o comando redo para repetir a iteração.
 contador = 1
 
 until contador > 20
-    contador += 1
-    redo if contador % 4 == 0
     puts contador
+    redo if contador % 4 == 0
+    contador += 1
+    
 end
 

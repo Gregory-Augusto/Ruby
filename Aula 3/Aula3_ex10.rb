@@ -5,12 +5,14 @@ retry para reiniciar o loop.
 
 contador = 1
 
-until contador >= 5
+until contador > 5
     begin
         puts contador
         contador += 1
+        raise if contador == 3
     rescue
-        retry if contador == 3
+        contador = 1
+        retry
     end
 end
 

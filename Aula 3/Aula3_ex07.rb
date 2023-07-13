@@ -7,6 +7,6 @@ contador = 0
 
 while contador <= 5
     contador += 1
-    break if contador == 5
     puts contador
+    break if contador == 5
 end

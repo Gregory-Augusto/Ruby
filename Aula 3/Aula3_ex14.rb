@@ -3,12 +3,12 @@ Utilizando um loop until, exiba números de 10 a 1 e, ao chegar em 5, utilize o 
 redo para repetir a iteração.
 =end
 
-contador = 0
+contador = 10
 
-until contador >= 10 
-    contador += 1
+until contador == 0 
+    puts contador 
     redo if contador == 5
-    puts contador   
+    contador -= 1
 end
 
 

@@ -5,7 +5,7 @@ exibição dos números divisíveis por 3.
 
 contador = 1
 
-while contador <= 10
+while contador < 10
     contador += 1
     next if contador % 3 == 0
     puts contador

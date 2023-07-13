@@ -6,8 +6,8 @@ interromper o loop ao encontrar um número ímpar.
 range = 1..50
 
 for numero in range 
+    break if numero % 2 != 0
     puts numero
-    break if numero % 2 == 1
 end
 
 
