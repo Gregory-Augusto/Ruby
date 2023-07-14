@@ -5,12 +5,17 @@ ex:
 print_triangulo(5)
 =end
 
-def contadores(valor)
+def contadores(string, valor)
+    contador = 0
     for numero in 0...valor
-        contador += 1
-        puts string 
+      contador += 1
+      puts string * contador
     end
-end
+  end
+  
+  
+  contadores("*", 5)
+  
 
 
 
