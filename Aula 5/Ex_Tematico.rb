@@ -12,7 +12,7 @@ class Metallica
     end
 end
 
-class LeadGuitar < Metallica
+class Vocalista < Metallica
     attr_accessor :idade, :funcao
     
     def initialize(idade, funcao, banda)
@@ -22,13 +22,13 @@ class LeadGuitar < Metallica
     end
     
     def info
-        print "Insira o nome do Lead Guitar do Metallica: "
-        leadGuitar = gets.chomp.split.map(&:capitalize).join(' ')
-        if leadGuitar != "James Hetfield"
+        print "Insira o nome do Vocalista do Metallica: "
+        vocalista = gets.chomp.split.map(&:capitalize).join(' ')
+        if vocalista != "James Hetfield"
             puts "Nome inválido! O programa será encerrado."
             exit
-        elsif leadGuitar == "James Hetfield"
-            puts "Nome: #{leadGuitar}"
+        elsif vocalista == "James Hetfield"
+            puts "Nome: #{vocalista}"
             puts "Idade: #{idade}"
             puts "Função: #{funcao}"
             super
@@ -70,7 +70,7 @@ class Baixista < Metallica
 end 
 
 
-class Guitarrista < Metallica
+class LeadGuitar < Metallica
     attr_accessor :idade, :funcao
     
     def initialize(idade, funcao, banda)
@@ -80,17 +80,17 @@ class Guitarrista < Metallica
     end
 
     def info
-        print "Insira o nome do guitarrista do Metallica que toca junto ao James: "
-        guitarrista = gets.chomp.split.map(&:capitalize).join(' ')
-        if guitarrista != "Dave Mustaine" && guitarrista != "Kirk Hammett"
+        print "Insira o nome do lead guitar do Metallica: "
+        leadGuitar = gets.chomp.split.map(&:capitalize).join(' ')
+        if leadGuitar != "Dave Mustaine" && leadGuitar != "Kirk Hammett"
             puts "Nome inválido! O programa será encerrado."
             exit
-        elsif guitarrista == "Dave Mustaine"
+        elsif leadGuitar == "Dave Mustaine"
             puts "Dave foi expulso do Metallica após algumas desavenças, mas formou a lendária banda Megadeth!"
             puts "Recomece o quiz!"
             exit
-        elsif guitarrista == "Kirk Hammett"
-            puts "Guitarrista: #{guitarrista}"
+        elsif leadGuitar == "Kirk Hammett"
+            puts "Lead Guitar: #{leadGuitar}"
             puts "Idade: #{idade}"
             puts "Função: #{funcao}"
             super
@@ -124,8 +124,8 @@ class Baterista < Metallica
     end
 end
 
-lead_guitar = LeadGuitar.new(59, "Lead Guitar", "Metallica")
-guitarrista = Guitarrista.new(60, "Guitarrista", "Metallica")
+lead_guitar = Vocalista.new(59, "Vocalista", "Metallica")
+guitarrista = LeadGuitar.new(60, " Lead Guitar", "Metallica")
 baixista = Baixista.new(58, "Baixista", "Metallica")
 baterista = Baterista.new(59, "Baterista", "Metallica")
 
