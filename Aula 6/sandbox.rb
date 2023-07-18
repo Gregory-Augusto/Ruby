@@ -1,3 +1,4 @@
+#área de testes
 require './product'
 require './book'
 require './electronic'
@@ -44,5 +45,5 @@ electronic.turn_off
 electronic.turn_off
 electronic.turn_on
 electronic.turn_on
-=end
+
 

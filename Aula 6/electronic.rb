@@ -1,3 +1,5 @@
+#sublasse electronic
+
 class Electronic < Product
     attr_accessor :brand, :model, :power
 

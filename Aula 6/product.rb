@@ -1,3 +1,4 @@
+#superclasse product
 class Product
     attr_accessor :name, :price, :on_sale, :original_price
 
