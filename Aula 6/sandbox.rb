@@ -1,7 +1,11 @@
 #área de testes
-require './product'
-require './book'
-require './electronic'
+require './modulos/shipping'
+require './modulos/payment'
+require './classes/product'
+require './classes/book'
+require './classes/electronic'
+
+# Aula 6
 
 #product = Product.new(name: "Xbox Series S", price: 2500)
 #product.display
@@ -45,5 +49,30 @@ electronic.turn_off
 electronic.turn_off
 electronic.turn_on
 electronic.turn_on
+=end
+
+# Aula 7
+
+book = Book.new(name: 'Livro teste', price: 20)
+
+card = {
+  card_number: '4444 4444 4444 4444',
+  card_cvv: '123',
+  card_holder: 'John Doe',
+  card_expiry: '2023-10-10'
+}
+
+bank_slip = {
+  name: "Fred Flinston",
+  document: "123.354.322.232-10",
+  email: 'fredflinston@gmail.com'
+}
+
+book.pay({
+  method: 'bank_slip',
+  amount: 0,
+  options: bank_slip  # Passa o hash `bank_slip` como valor para a chave `options`
+})
+
 
 

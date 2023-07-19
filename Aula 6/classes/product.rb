@@ -1,5 +1,7 @@
-#superclasse product
 class Product
+    include Shipping
+    include Payment
+
     attr_accessor :name, :price, :on_sale, :original_price
 
     def initialize(attributes = {})
