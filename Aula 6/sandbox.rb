@@ -1,9 +1,13 @@
 #área de testes
-require './modulos/shipping'
-require './modulos/payment'
+require './modules/adressable'
+require './modules/validatable'
+require './classes/customer'
+require './modules/shipping'
+require './modules/payment'
 require './classes/product'
 require './classes/book'
 require './classes/electronic'
+
 
 # Aula 6
 
@@ -52,6 +56,7 @@ electronic.turn_on
 =end
 
 # Aula 7
+=begin 
 
 book = Book.new(name: 'Livro teste', price: 20)
 
@@ -73,6 +78,18 @@ book.pay({
   amount: 0,
   options: bank_slip  # Passa o hash `bank_slip` como valor para a chave `options`
 })
+=end
 
+# Aula 8
+
+customer = Customer.new({
+  first_name: 'John',
+  last_name: "Constantine",
+  document: "123.456.789-10",
+  email:"john@constantine.com",
+  address: address
+})
+
+customer.show
 
 
