@@ -31,16 +31,21 @@ class Customer
     puts "---"
     puts "Compras:"
 
-   invoices.each do |invoice|
-    puts "---"
-    puts "Código: #{invoice[:invoice]}"
-    puts "Valor: #{invoice[:amount]}"
-    puts "---"
-   end
+    show_invoices
   end
 
   def add_invoice(invoice)
     @invoices.push(invoice)
+  end
+
+  def show_invoices()
+    puts "Nenhuma compra realizada" if invoices.empty?
+    invoices.each do |invoice|
+      puts "---"
+      puts "Código: #{invoice[:invoice]}"
+      puts "Valor: #{invoice[:amount]}"
+      puts "---"
+     end
   end
 
   private
