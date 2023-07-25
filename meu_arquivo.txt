@@ -1,0 +1,1 @@
+Ruby é muito legalA manipulação de arquivos é fácil, em Ruby!\nVamos aprender mais

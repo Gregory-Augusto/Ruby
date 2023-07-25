@@ -1,0 +1,1 @@
+Inserção de dados através do File.write
